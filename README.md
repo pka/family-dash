@@ -1,6 +1,6 @@
 # Family Dashboard
 
-Display a family calendar on an Cybook e-reader.
+Display family calendar on a Cybook e-reader.
 
 
 Inspiration:
