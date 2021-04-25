@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Family Calendar</title>
+    <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+    <meta charset="utf-8"/>
+    <meta name="imgkit-format" content="jpg"/>
+    <meta name="imgkit-width" content="758"/>
+    <meta name="imgkit-height" content="1024"/>
+  </head>
+  <body>
+    <h1>Familienkalender</h1>
+    {% set day_name= ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag', 'Sonntag'] %}
+    {% for day, events in day_events.items() %}
+    <h2>{{ day_name[day.weekday()] }} {{day.day}}.{{day.month}}.</h2>
+    <table>
+    {% for event in events %}
+      <tr>
+          <td>
+          {% if event["DTSTART"].params['value'] == 'DATE-TIME' -%}
+            {{ event["DTSTART"].dt.astimezone(tz).strftime('%H:%M') }}-{{ event["DTEND"].dt.astimezone(tz).strftime('%H:%M') }}
+          {% endif %}
+          </td>
+          <td>{{ event["SUMMARY"] }}</td>
+      </tr>
+    {% endfor %}
+    </table>
+    {% endfor %}
+  </body>
+</html>

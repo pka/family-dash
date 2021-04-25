@@ -1,0 +1,29 @@
+#!/bin/sh
+
+. /etc/dash
+
+start()
+{
+    /mnt/app/dash.sh $URL >/dev/null 2>&1 &
+}
+
+stop()
+{
+    killall -9 dash.sh
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop    
+        ;;
+    restart)
+        stop
+        start
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|restart}"
+        exit 1
+esac
