@@ -27,21 +27,21 @@
 
 ## Firmware
 
-### Official
+### Installation
 
-Manual installation:
+From microSD card (https://blog.bookeen.com/2012/01/09/cybook-odyssey-upgrade-v1481/):
 - Copy the file CybUpdate.bin onto a microSD card.
 - Switch off your Cybook (Home, “Settings”, “Advanced”, “Shutdown”).
 - Insert the microSD card.
 - Press the main button (central button below the screen) and keep it pressed while switching on the Cybook.
 - When the boot image appears (after about 2s), you can release the main button.
 
-* https://blog.bookeen.com/2012/01/09/cybook-odyssey-upgrade-v1481/
-* https://bookeen.com/pages/tutoriel-mode-demo?_pos=1&_sid=f06eea695&_ss=r
-
 ### game-over
 
+Firmware with dropbear SSH server
+
 * http://blog.soutade.fr/post/2015/03/game_over.html
+  Install "Cybook Muse/Odyssey essential : 6.3.2326"
 
 ### lev-jailbreak
 
